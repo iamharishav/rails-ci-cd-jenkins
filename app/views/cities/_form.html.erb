@@ -1,0 +1,18 @@
+
+<% if city.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+      <% city.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= f.label :name, "Name" %>
+<%= f.text_field :name %>
+<% if controller.action_name == "new" %>
+	<%= f.button :submit, :value => "Create City" %>
+<% else %>
+	<%= f.button :submit, :value => "Update City" %>
+<% end %>

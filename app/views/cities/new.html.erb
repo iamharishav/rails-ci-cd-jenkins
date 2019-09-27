@@ -1,0 +1,3 @@
+<%= form_for(@city, :url => cities_path, :html => { method: "post" } ) do |f| %>
+	<%= render "cities/form", f: f, city: @city %>
+<% end %>
